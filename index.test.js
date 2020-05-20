@@ -7,7 +7,7 @@ describe('service functions', () => {
     jest.resetModules()
     process.env = { ...OLD_ENV }
     delete process.env.NODE_ENV
-  });
+  })
 
   afterEach(() => {
     process.env = OLD_ENV
@@ -16,7 +16,7 @@ describe('service functions', () => {
   test('getServiceHost correctly fallbacks to the service name if nothing is set and no default host is passed', () => {
     expect(ServiceUtils.getServiceHost('service')).toBe('service')
   })
-  
+
   test('getServiceHost correctly returns the host depending on the environment variables', () => {
     expect(ServiceUtils.getServiceHost('service', 'default')).toBe('default')
     process.env.SERVICE_HOST = 'myhost'
@@ -24,7 +24,7 @@ describe('service functions', () => {
     process.env.SERVICE_SERVICE_HOST = 'mykuberneteshost'
     expect(ServiceUtils.getServiceHost('service', 'default')).toBe('mykuberneteshost')
   })
-  
+
   test('getServicePort correctly returns the port depending on the environment variables', () => {
     expect(ServiceUtils.getServicePort('service', 8080)).toBe(8080)
     process.env.SERVICE_PORT = 8081

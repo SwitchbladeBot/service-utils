@@ -8,6 +8,6 @@ module.exports = class ServiceUtils {
   }
 
   static encode (service) {
-    return service.replace(/\-/g, '_').toUpperCase()
+    return service.replace(/-/g, '_').toUpperCase()
   }
 }
