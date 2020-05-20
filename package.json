@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/SwitchbladeBot/service-utils/issues"
   },
-  "homepage": "https://github.com/SwitchbladeBot/service-utils#readme"
+  "homepage": "https://github.com/SwitchbladeBot/service-utils#readme",
+  "devDependencies": {
+    "jest": "^26.0.1",
+    "standard": "^14.3.4"
+  }
 }
